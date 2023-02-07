@@ -1,0 +1,26 @@
+RENDU :
+1. How is permission granted to delete a file?
+
+The access control checks if the user has the correct permissions on the directory containing the file and not the file itself, then deletes it if the conditions are met.
+
+2. Create a file that your colleague can edit but not delete and another he can delete but not edit
+
+touch first && chmod o+trw first
+touch second && chmod o-tw second (The user must have read, write and execute permission on the directory)
+
+3. Does it make sense to be able to assign such rights?
+
+In my opinion both of these rights combinations of rights don't really make sense because:
+- If the user can edit a file they can empty its content, making it useless except in the case of a program only needing its existence
+- If the user can delete a file, it would make no sense to restrict write access except to prevent malicious code injection that could be executed with that file
+
+4. What are the practical consequences of this experience?
+
+See previous answers, but moreover, I discovered that directories permissions is the determining factor for file deletion, then comes the sticky bit.
+
+ISSUES :
+- Fichier non disponible lors le consultation (est-ce Unix & Linux ?)
+- Lors de la lecture faut-il faire les exercices présents dans le livre ?
+
+NOTES : 
+- Peut etre ajouter lecture chapitre 6 à (Unix & Linux) pour l'exercice 3 (tres interessant), préciser un peu la question et donner quelques indications sur les parties attendues (uniquement le file system ou les services aussi ?)
