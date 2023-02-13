@@ -21,4 +21,4 @@ In my opinion both of these rights combinations of rights don't really make sens
 
 ## 4. What are the practical consequences of this experience?
 
-See previous answers, but moreover, I discovered that directories permissions is the determining factor for file deletion, then comes the sticky bit.
+See previous answers, but moreover, I discovered that directory's permission is the determining factor for file deletion, then comes the sticky bit.
