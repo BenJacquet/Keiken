@@ -42,7 +42,7 @@ sed 's/:.*//' /etc/passwd | sort
 
 ## Write a program with the following behavior: 
 - Threads are created (their number being passed as a parameter when launching the program);
-- Each thread displays a message (for exampleHello  !);
+- Each thread displays a message (for example Hello  !);
 - The principal thread waits for the termination of the various threads created
 - Each thread shows his PID
 - Edit the program that each thread receive it’s priority & print it.
