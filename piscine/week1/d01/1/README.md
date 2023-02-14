@@ -19,7 +19,7 @@ In my opinion both of these rights combinations of rights don't really make sens
 - If the user can edit a file they can empty its content, making it useless except in the case of a program only needing its existence.
 - If the user can delete a file, it would make no sense to restrict write access except to prevent malicious code injection that could be executed with that file.
 
-For other, less particuliar permissions, such as providing different access levels to group and others is really important as it allows to manage permissions on specific files without giving too much permissions (for example by giving root access). It also allows faster management as you can change permissions for an entire group instead of a single user by combining chmod with chgroup and or usermod -a -G.
+Other, less particuliar permissions, such as providing different access levels to group and others, are really important as they allow to manage permissions on specific files without giving too much rights (for example by giving root access). It also allows faster management as you can change permissions for an entire group instead of a single user by combining chmod with chgroup and or usermod -a -G.
 
 ## 4. What are the practical consequences of this experience?
 
