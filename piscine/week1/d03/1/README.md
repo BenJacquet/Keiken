@@ -23,6 +23,14 @@ ifconfig
 
 This will display the IP address of the victim machine. Make a note of this IP address, as it will be needed later.
 
+### Step 1.5: Enable traffic forwarding
+
+Run this command in your terminal to allow your machine to forward all incoming traffic to the real gateway:
+
+```
+sudo sysctl net.ipv4.ip_forward=1
+```
+
 ### Step 2: Using Ettercap to Perform ARP Poisoning
 
 On the attacker's Kali virtual machine seach for ettercap from the startmenu or open a terminal and type the following command to start ettercap:
