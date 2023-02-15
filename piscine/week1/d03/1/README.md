@@ -6,7 +6,7 @@ This guide will show you how to perform ARP poisoning between two virtual machin
 
 You will need the following tools:
 
-- A victim virtual machine=
+- A victim virtual machine
 - An attacker virtual machine
 - Ettercap
 - Wireshark
