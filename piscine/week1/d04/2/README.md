@@ -32,7 +32,7 @@ We get the (incomplete here) Google frontpage in our browser!
 Open a terminal window and type the following command to start a Netcat server:
 
 ```
-nc -l [port_number]
+nc -vlp [port_number]
 ```
 
 ![Alt text](./screenshots/4.jpg?raw=true "Demo")
