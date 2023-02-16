@@ -1,0 +1,27 @@
+OSI Model Layer 7 - Application (Browser)
+
+Requests are made using HTTP which itself generally uses TCP (Transmission Control Protocol - port 80)
+
+4 Steps :
+- The application opens a connection
+- The application senda a request to the server
+- The server sends a response to the browser
+- The connection is closed
+
+HTTP is a stateless protocol, which means it does not keep track of the connections.
+
+Several methods have been found to improve it and allow persistence of data.
+
+One of the first was through cookies, sets of data exchanged between client and server during an HTTP transaction.
+They allowed some data to be written or read at any subsequent connection.
+
+These cookies are very rudimental and don't offer a real state, the real hero here is SSL (Secure Sockets Layer).
+
+It provides secure client and server authentication and real sessions.
+
+HTTP versions 1.1 or newer allow persistence to avoid making multiple TCP connections for every ressource.
+
+Caching is another mechanisms that reduces strain and traffic on networks and servers, by giving the possibility to store requests or responses that will not need to be sent again.
+
+To make sure that the data is considered fresh, an expiration mechanism exists.
+If the data is considered stale, it will need to check with the origin server if it is still usable and get the necessary pieces for that specific response.
