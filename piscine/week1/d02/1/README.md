@@ -41,11 +41,15 @@ find /usr/share/doc/ -type f | awk -F '/' '{if ($4 == "doc" && ($5 ~ /^sh$/ || $
 find /home -maxdepth 1 -type f -mmin -600 | grep -v "/$"
 ```
 
+![Alt text](../screenshots/1-1.jpg?raw=true "Demo")
+
 ## Can you find an alternative for wc -l, using grep?
 
 ```
 grep -c "$" <filename>
 ```
+
+![Alt text](../screenshots/1-2.jpg?raw=true "Demo")
 
 ## Using the file system table (/etc/fstab for instance), list local disk devices.
 
@@ -53,12 +57,18 @@ grep -c "$" <filename>
 grep -v '#' /etc/fstab
 ```
 
+![Alt text](../screenshots/1-3.jpg?raw=true "Demo")
+
 ## Display configuration files in /etc that contain numbers in their names.
 
 ```
 find /etc -type f -name '*[0-9]*.conf'
 ```
 
+![Alt text](../screenshots/1-4.jpg?raw=true "Demo")
+
 ## At least two games from Regex Crossword 
 
 OK but beginner only
+
+![Alt text](../screenshots/1-5.jpg?raw=true "Demo")

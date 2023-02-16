@@ -20,6 +20,8 @@ END {
 }
 ```
 
+![Alt text](../screenshots/2-1.jpg?raw=true "Demo")
+
 ## Create an AWK script that show the number of repetition of a specific string in a list of strings then inverse it.
 ```
 IN PROGRESS
@@ -30,15 +32,21 @@ IN PROGRESS
 sed -E 's/^[0-9]{9}$/&/; s/^([0-9]{3})([0-9]{3})([0-9]{3})$/(\1)\2-\3/'
 ```
 
+![Alt text](../screenshots/2-3.jpg?raw=true "Demo")
+
 ## Use sed to select and convert all file names with suffix .html given as output by ls into capital letters with suffix .HTM. Check out command y in sed man page
 ```
 sed -E '/\.html$/ { s/[a-z]/\U&/g; s/\.HTML$/.HTM/g; }'
 ```
 
+![Alt text](../screenshots/2-4.jpg?raw=true "Demo")
+
 ## Use sed to extract full user names from /etc/passwd/
 ```
 sed 's/:.*//' /etc/passwd | sort
 ```
+
+![Alt text](../screenshots/2-5.jpg?raw=true "Demo")
 
 ## Write a program with the following behavior: 
 - Threads are created (their number being passed as a parameter when launching the program);
@@ -94,3 +102,5 @@ int main(int argc, char **argv)
 	return 0;
 }
 ```
+
+![Alt text](../screenshots/2-6.jpg?raw=true "Demo")
