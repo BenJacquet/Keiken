@@ -1,4 +1,4 @@
-package unit_tests;
+package test.java.unit_tests;
 
 import main.java.beverages.*;
 import main.java.supplements.*;
@@ -45,7 +45,8 @@ public class BeveragesPricingTest {
     @Test
     public void computes_coffee_with_milk_and_cream_price() {
         Coffee coffee = new Coffee();
-        coffee.addSupplement(new Milk()).addSupplement(new Cream());
+        coffee.addSupplement(new Cream());
+        coffee.addSupplement(new Milk());
         assertThat(coffee.price(), is(closeTo(1.45, 0.001)));
     }
 

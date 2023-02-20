@@ -1,5 +1,4 @@
 package main.java.beverages;
-
 import main.java.supplements.*;
 
 import java.util.ArrayList;
@@ -11,8 +10,8 @@ public abstract class Drink implements Beverage{
 
     public double price() {
         return basePrice() + supplements.stream()
-                .map(Supplement::price)
-                .reduce(basePrice(), Double::sum);
+                            .map(Supplement::price)
+                            .reduce(basePrice(), Double::sum);
     }
 
     List<Supplement> validSupplements() {
