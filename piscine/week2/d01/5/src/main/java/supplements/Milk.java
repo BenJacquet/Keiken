@@ -1,4 +1,4 @@
-package main.java.supplements;
+package supplements;
 
 public class Milk implements Supplement {
     @Override

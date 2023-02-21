@@ -1,7 +1,6 @@
-package main.java.beverages;
+package beverages;
 
-import main.java.supplements.Milk;
-import main.java.supplements.Supplement;
+import supplements.*;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package main.java.beverages;
+package beverages;
 
 public interface Beverage {
     double price();

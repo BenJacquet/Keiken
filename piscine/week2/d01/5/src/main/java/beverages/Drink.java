@@ -1,5 +1,5 @@
-package main.java.beverages;
-import main.java.supplements.*;
+package beverages;
+import supplements.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ public abstract class Drink implements Beverage{
     private List<Supplement> supplements = new ArrayList<>();
 
     public double price() {
-        return basePrice() + supplements.stream()
+        return supplements.stream()
                             .map(Supplement::price)
                             .reduce(basePrice(), Double::sum);
     }
@@ -19,11 +19,13 @@ public abstract class Drink implements Beverage{
     }
 
     public void addSupplement(Supplement supplement){
-        if (!validSupplements().contains(supplement.getClass())) {
-            System.out.println("Invalid Supplement.");
-            return;
+        for (int i = 0; i < validSupplements().size(); i++) {
+            if (supplement.getClass().equals(validSupplements().get(i).getClass())) {
+                supplements.add(supplement);
+                System.out.println("Successfully added supplement to beverage!");
+                return;
+            }
         }
-        supplements.add(supplement);
-        System.out.println("Successfully added supplement to beverage!");
+        System.out.println("Invalid Supplement.");
     }
 }
