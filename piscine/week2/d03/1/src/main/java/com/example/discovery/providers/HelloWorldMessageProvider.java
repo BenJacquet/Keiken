@@ -1,4 +1,4 @@
-package com.example.discovery;
+package com.example.discovery.providers;
 
 public class HelloWorldMessageProvider implements MessageProvider {
     @Override

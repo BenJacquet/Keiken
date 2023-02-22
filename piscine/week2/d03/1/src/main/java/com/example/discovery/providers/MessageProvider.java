@@ -1,4 +1,4 @@
-package com.example.discovery;
+package com.example.discovery.providers;
 
 public interface MessageProvider {
     String getMessage();

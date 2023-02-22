@@ -1,4 +1,7 @@
-package com.example.discovery;
+package com.example.discovery.factories;
+import com.example.discovery.providers.MessageProvider;
+import com.example.discovery.renderers.MessageRenderer;
+
 import java.util.Properties;
 
 public class MessageSupportFactory {
@@ -9,7 +12,7 @@ public class MessageSupportFactory {
     private MessageSupportFactory() {
         props = new Properties();
         try {
-            props.load(this.getClass().getResourceAsStream("/msf.properties"));
+            props.load(this.getClass().getResourceAsStream("/app-context.xml"));
             String rendererClass = props.getProperty("renderer.class");
             String providerClass = props.getProperty("provider.class");
             renderer = (MessageRenderer) Class.forName(rendererClass).newInstance();

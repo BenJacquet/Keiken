@@ -1,4 +1,6 @@
-package com.example.discovery;
+package com.example.discovery.renderers;
+
+import com.example.discovery.providers.MessageProvider;
 
 public class StandardErrMessageRenderer implements MessageRenderer {
     private MessageProvider messageProvider;
