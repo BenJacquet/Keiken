@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  database:
+    image: mysql:latest
+    restart: always
+#    volumes:
+#      - "PATH_ON_HOST":/var/lib/mysql
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: chatgpt
+      MYSQL_USER: chatgpt
+      MYSQL_PASSWORD: chatgpt
+      MYSQL_DATABASE: chatgpt
+    ports:
+      - "3306:3306"
+
+volumes:
+  db:
+    driver: local
