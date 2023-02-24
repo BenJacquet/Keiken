@@ -4,7 +4,7 @@ import com.example.chatgptapi.entities.Conversation;
 import com.example.chatgptapi.repositories.ConversationRepository;
 import org.springframework.stereotype.Service;
 import com.theokanning.openai.completion.CompletionRequest;
-import com.theokanning.openai.service.OpenAiService;;
+import com.theokanning.openai.service.OpenAiService;
 
 import java.util.Date;
 
@@ -16,9 +16,6 @@ public class PromptService {
     }
 
     public String createCompletion(String openAIToken, String userMessage) {
-        if (openAIToken == null) {
-            System.exit(1);
-        }
         OpenAiService service = new OpenAiService(openAIToken);
         CompletionRequest completionRequest = CompletionRequest.builder()
                 .model("text-davinci-003")
