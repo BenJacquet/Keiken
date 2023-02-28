@@ -1,0 +1,36 @@
+body {
+	background-color: #fff;
+	color: #333;
+	font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+	padding: 1em;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.box {
+	width: 500px;
+	padding: 0.5em;
+	display: flow-root;
+}
+
+/* Check https://developer.mozilla.org/fr/docs/Web/Guide/CSS/Block_formatting_context */
+/* and https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts */
+
+.float {
+	margin: 15px;
+	width: 150px;
+	height: 150px;
+	border-radius: 5px;
+	background-color: rgb(207, 232, 220);
+	padding: 1em;
+	float: right;
+}
+
+.box {
+	background-color: rebeccapurple;
+	padding: 10px;
+	color: #fff;
+}
