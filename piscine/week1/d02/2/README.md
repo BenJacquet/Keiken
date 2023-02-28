@@ -94,6 +94,7 @@ int main(int argc, char **argv)
 		int *thread_id = malloc(sizeof(int));
 		*thread_id = i + 1;
 		int result = pthread_create(&threads[i], NULL, thread, thread_id);
+		free(thread_id);
 	}
 
 	for (int i = 0; i < thread_nbr; i++) {
