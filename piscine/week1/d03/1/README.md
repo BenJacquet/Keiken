@@ -1,3 +1,19 @@
+# ARP Poisoning
+
+## What is is ?
+
+ARP (Address Resolution Protocol) poisoning, also known as ARP spoofing, is a type of cyber attack that takes advantage of the weaknesses in the ARP protocol to intercept, modify or steal data transmitted over a local network.
+
+When a device wants to communicate with another device on the same network, it needs to know the MAC (Media Access Control) address of the destination device. The ARP protocol is used to map IP addresses to MAC addresses. When a device wants to communicate with another device, it sends an ARP request to the network asking for the MAC address of the target device.
+
+In an ARP poisoning attack, the attacker sends fake ARP messages to other devices on the network, claiming to be the target device with a spoofed MAC address. The attacker can either send a fake ARP message to the target device with the MAC address of the attacker's device, or send a fake ARP message to all devices on the network, pretending to be the gateway or router that connects the devices to the internet.
+
+Once the attacker's fake ARP messages are sent, other devices on the network will update their ARP tables with the fake MAC address. This means that when the devices want to communicate with the target device, they will send their traffic to the attacker's device instead.
+
+The attacker can then intercept, modify or steal the data transmitted between the devices. For example, the attacker can capture login credentials, sensitive information or passwords by sniffing the network traffic. In some cases, the attacker may also modify the traffic to execute man-in-the-middle attacks, such as redirecting a user to a fake website.
+
+To prevent ARP poisoning attacks, it is important to use security measures such as encryption, virtual private networks (VPNs), and network monitoring tools that can detect and block suspicious ARP traffic. Additionally, configuring static ARP entries on critical devices can also help prevent these types of attacks.
+
 # ARP Poisoning between Virtual Machines
 
 This guide will show you how to perform ARP poisoning between two virtual machines, with the victim running Mint and the attacker running Kali.
