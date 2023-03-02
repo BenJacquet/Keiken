@@ -1,4 +1,4 @@
-# Build Docker from the ground up
+# Build Docker from the ground up 1
 
 ## Run a bash server in a jailed environment without using Docker
 
@@ -40,13 +40,14 @@
 ### How to do it
 Run the following command:
 ```
-sudo unshare -n -p -f --mount-proc=$PWD/bundle/rootfs/proc  chroot bundle/rootfs /bin/bash
+sudo unshare -n -m -p -f --mount-proc=$PWD/bundle/rootfs/proc  chroot bundle/rootfs /bin/bash
 ```
 
 Let's take a look at this command to understand exactly what it does:
 
 - unshare is used to create new namespaces and then executes the command specified as argument (chroot rootfs /bin/bash)
 - -n flag creates a new network namespace
+- -m flag creates a new mnt namespace
 - -p flag creates a new PID namespace
 - -f flag forks the specified command as a child process of unshare instead of simply running it
 - --mount-proc flag mounts the proc file system to the path specified right before running the command, it also creates a new mount namespace.
