@@ -34,7 +34,7 @@ Create the necessary devices in /dev:
 
 Run the following command:
 ```
-sudo unshare -m -p -f --mount-proc=$PWD/bundle/rootfs/proc chroot bundle/rootfs nginx -g 'daemon off;'
+sudo unshare -m -p -f --mount-proc=./bundle/rootfs/proc chroot bundle/rootfs nginx -g 'daemon off;'
 ```
 
 Note that this time we stayed on the same network namespace as our host to allow communication.
@@ -45,6 +45,11 @@ Congratulations, you created your first nginx server container without Docker !
 You can now go on your host browser and communicate with you server by going to localhost:80
 ![screenshot](./screenshots/2.jpg "Demo")
 
+We can also open a bash in the same namespaces as nginx using nsenter by targeting its pid:
+```
+sudo nsenter -r -t 2829 unshare -p -f chroot bundle/rootfs /bin/bash
+```
+
 ## Ressources :
 
 [unshare(1) man page](https://man7.org/linux/man-pages/man1/unshare.1.html)
@@ -52,5 +57,7 @@ You can now go on your host browser and communicate with you server by going to 
 [Linux namespaces](https://en.wikipedia.org/wiki/Linux_namespaces)
 
 [containers from scratch](https://ericchiang.github.io/post/containers-from-scratch/)
+
+[container namespaces with nsenter](https://www.redhat.com/sysadmin/container-namespaces-nsenter)
 
 [running nginx in a chroot jail](https://www.cyberciti.biz/faq/howto-run-nginx-in-a-chroot-jail/)
