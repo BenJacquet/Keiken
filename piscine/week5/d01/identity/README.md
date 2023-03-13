@@ -148,20 +148,57 @@ To achieve everything, OAuth defines a total of four role involved in authorizat
 - <b>Client</b>: An application which needs to access resources at the resource server, on the resource owner’s behalf or on its own behalf. We’ll generally use the term application instead of client, for consistency across chapters.
 - <b>Authorization Server</b>: A service trusted by the resource server to authorize applications to call the resource server. It authenticates the application or resource owner and requests consent from the resource owner if the application will make requests on the resource owner’s behalf. With OAuth 2.0, the resource server (API) is a relying party to the authorization server. The authorization server and resource server may be operated by the same entity.
 
+It defines two types of client:
+- Confidential Client – An application that runs on a protected server and can securely store confidential secrets to authenticate itself
+to an authorization server or use another secure authentication mechanism for that purpose.
+- Public Client – An application that executes primarily on the user’s client device (native application) or in the client browser and cannot securely store a secret or use other means to authenticate itself to an authorization server.
+
+Three profiles:
+- Web Application – A confidential client with code executing on a protected, back-end server. The server can securely store any secrets needed for the client to authenticate itself as well as any tokens it receives from the authorization server.
+- User Agent-Based App – Assumed to be a public client with code executing in the user’s browser. Example: A JavaScript-based single- page application running in the browser.
+- Native Application – Assumed to be a public client that is installed and executed on the user’s device, such as a mobile application or desktop application.
+
+Can give two security tokens and an intermediary authorization code:
+- Authorization Code – An intermediary, opaque code returned to an application and used to obtain an access token and optionally a refresh token. Each authorization code is used once.
+- Access Token – A token used by an application to access an API. It represents the application’s authorization to call an API and has an expiration.
+- Refresh Token – An optional token that can be used by an application to request a new access token when a prior access token has expired.
+
+
+Four authorization grant types:
+- Authorization code grant
+- Implicit grant
+- Resource owner password credentials grant
+- Client credentials grant
+
 To recap, the OAuth 2.0 protocol provides an authorization solution, not an authentication solution. It enables an application to call an API on its own behalf or a user’s behalf, with the call constrained to the scope of an authorized request
 
 <br/>
 
 ### OIDC - OpenID Connect
+The OIDC solution involves three roles:
+- End User – The end user is a subject to be authenticated. (We will use the term “user” for simplicity and consistency across chapters.)
+- OpenID Provider (OP) – The OpenID Provider is an OAuth 2.0 authorization server that implements OIDC and can authenticate a user and return claims about the authenticated user and the authentication event to a relying party (application).
+- Relying Party (RP) – An OAuth 2.0 client which delegates user authentication to an OpenID Provider and requests claims about the user from the OpenID Provider. We will generally use the term “application” for the relying party for consistency across chapters, but a relying party could be another identity provider in more advanced use cases.
 
-<b>Summary</b>
+It references the client types as OAuth 2.0
 
-OIDC provides a layer on top of OAuth 2.0 for authenticating users and returning information to applications in a standard format about the authenticated user.
+OIDC uses the authorization code, access token, and refresh token as described in the previous chapter for OAuth 2.0 and defines an ID Token:
+-  ID Token – A token used to convey claims about an authentication event and an authenticated user to a relying party (application).
 
-<b>Problem solved</b>
+Endpoints:
 
-Even if OAuth 2.0 authorization servers were capable of authenticating users, the framework did not provide a standard way to securely convey the identity of an authenticated user to an application. OIDC provided a solution for this need.
+- UserInfo Endpoint – Returns claims about an authenticated user. Calling the endpoint requires an access token, and the claims returned are governed by the access token.
 
+ID Token:
+An ID Token is a security token used by an OpenID Provider to convey claims to an application about an authentication event and authenticated user.
+ID Tokens are encoded in JSON Web Token (JWT) format
+
+![jwt](./images/jwt.png "jwt")
+
+The OIDC flows are designed around the constraints of different types of applications and bear some similarity to the grant types defined in OAuth 2.0. The original OIDC core specification defines the following flows:
+- Authorization Code Flow
+- Implicit Flow
+- Hybrid Flow
 
 # Exercises
 
