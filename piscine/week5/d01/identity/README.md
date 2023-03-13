@@ -200,6 +200,11 @@ The OIDC flows are designed around the constraints of different types of applica
 - Implicit Flow
 - Hybrid Flow
 
+Here is a figure showing how OIDC can be used to authenticate a user
+![OIDC Authentication](./images/OIDC.png "OIDC Authentication")
+
+It is best to use OIDC when authentication is needed, instead of simple authorization where OAuth is the preferred way.
+
 # Exercises
 
 ## Explain with an example, how Oauth works (Request by Request) : What is the purpose of each request? when it happens ? what are the actor involved
@@ -330,18 +335,6 @@ The access tokens will expire after a certain time period, and the client will n
 
 6. Implement authorization scopes to provide fine-grained control over the resources that the client can access.
 For example, we would have a "read" scope that allows the client to access jokes, but not modify or delete them.
-
-## What is OIDC : In detail? explain with a use case where OIDC is needed and where Oauth is not enough
-
-OIDC stands for OpenID Connect.
-
-It is a layer that sits ON TOP of OAuth 2.0 that adds functionality around login and profile information about the person that is logged in.
-
-It allows a user to AUTHENTICATE rather that AUTHORIZING (OAuth).
-
-The following figure shows how OIDC authenticates a user:
-
-![OIDC Authentication](./images/OIDC.png "OIDC Authentication")
 
 <br />
 
