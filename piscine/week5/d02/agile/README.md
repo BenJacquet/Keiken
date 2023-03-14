@@ -81,35 +81,35 @@ The Product Owner will be in charge of reporting to the CEO
 
 <b>Task 1</b>: Create functional design documents for the accounting application, detailing the user stories, requirements, and acceptance criteria.
 
-Responsible roles: Product Owner, Scrum Master, Developers
+Responsible roles: Product Owner, Scrum Master, Front End Developer, Service Developer
 
 <b>Task 2</b>: Design the user interface (UI) for the accounting application, ensuring that it is user-friendly, visually appealing, and meets the needs of the users.
 
-Responsible roles: UX Designer, Developers
+Responsible roles: UX Designer, Front End Developer
 
 <b>Task 3</b>: Create the technical design for the accounting application, outlining the architecture, infrastructure, and technologies that will be used.
 
-Responsible roles: Developers
+Responsible roles: Technical Design, Service Developer
 
 <b>Task 4</b>: Develop the front-end of the accounting application, using the design and functional specifications to create a user interface that is responsive, functional, and meets the user's needs.
 
-Responsible roles: Developers, UX Designer
+Responsible roles: Front End Developer, UX Designer
 
 <b>Task 5</b>: Develop the backend services for the accounting application, using third-party APIs as necessary, and ensuring that they are secure, scalable, and meet the needs of the users.
 
-Responsible roles: Service Developers, Security Team Member
+Responsible roles: Service Developer, Security Team Member
 
 <b>Task 6</b>: Create a comprehensive test plan for the accounting application, outlining the test cases, scenarios, and criteria for testing.
 
-Responsible roles: Tester, Product Owner, Developers
+Responsible roles: Tester, Product Owner, Front End Developer, Service Developer, Technical Design
 
 <b>Task 7</b>: Conduct functional, integration, and acceptance testing for the accounting application, using the test plan to verify that the application meets the requirements and specifications.
 
-Responsible roles: Tester, Developers
+Responsible roles: Tester, Front End Developer, Service Developer, Technical Design
 
 <b>Task 8</b>: Deploy the accounting application to a production environment, ensuring that it is stable, scalable, and meets the security and compliance requirements.
 
-Responsible roles: Developers, Security Team Member
+Responsible roles: Deployment, Security Team Member
 
 <b>Task 9</b>: Conduct user acceptance testing for the accounting application, using feedback from the users to improve the application's usability, functionality, and performance.
 
@@ -117,7 +117,7 @@ Responsible roles: Product Owner, UI/UX Designer, Tester
 
 <b>Task 10</b>: Implement user authentication and authorization, to ensure that users only have access to the appropriate features and data
 
-Responsible roles: Developers, Security Team Member
+Responsible roles: Front End Developer, Service Developer, Security Team Member
 
 
 ## Try to fill all the elements of one of these task? What will compose this task? Will it have subtasks?
