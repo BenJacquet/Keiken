@@ -164,4 +164,7 @@ During the <b>Daily Standup</b>
 - Conduct the deployment (Monitor the process)
 - Tests after the deployment (Test that everything works as intended and no security or functional issue arise)
 
-## Create a Jira project with the 10 tickets  that you thought about, and adapt the ticket workflow to the process you imagined for the team.
+## Create a Jira project with the 10 tickets that you thought about, and adapt the ticket workflow to the process you imagined for the team.
+
+![jira sprint](./screenshots/JiraTest.png "jira sprint")
+
